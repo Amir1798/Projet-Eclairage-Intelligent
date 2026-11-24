@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "Amir Kallel",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -164.5, "left": 220.6, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": 277.1, "left": 211, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 15.6, "left": 263, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 100, "left": 200, "attrs": { "value": "220" } },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 32, "left": -258.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "pot1:VCC", "esp:3V3", "red", [] ],
+    [ "pot1:GND", "esp:GND.1", "black", [] ],
+    [ "pot1:SIG", "esp:34", "green", [] ],
+    [ "pot2:VCC", "esp:3V3", "red", [] ],
+    [ "pot2:GND", "esp:GND.2", "black", [] ],
+    [ "pot2:SIG", "esp:32", "green", [] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [] ],
+    [ "ldr1:GND", "esp:GND.3", "black", [] ],
+    [ "ldr1:AO", "esp:35", "blue", [] ],
+    [ "led1:A", "r1:1", "green", [] ],
+    [ "led1:C", "esp:GND.4", "black", [] ],
+    [ "r1:2", "esp:2", "green", [] ]
+  ],
+  "dependencies": {}
+}
