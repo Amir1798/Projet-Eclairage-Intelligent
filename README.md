@@ -17,6 +17,11 @@ Ce projet consiste en la conception et la simulation d'un système d'éclairage 
 4.  **IoT & Maintenance Prédictive** : Envoi de données (Luminosité, Batterie, État LED, Alertes) vers le Cloud (ThingSpeak).
 
 ---
+---
+
+## 📊 Données de test (Data Logging)
+Le fichier `feeds.csv` contient l'exportation brute des données collectées sur ThingSpeak lors de la phase de test. 
+Il permet d'analyser les corrélations entre la luminosité (Field 1), l'état de la batterie (Field 2), l'allumage de la LED (Field 3) et les alertes (Field 4).
 
 ## 📸 Aperçu du projet
 
